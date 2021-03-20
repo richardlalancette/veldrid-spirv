@@ -11,9 +11,9 @@ The easiest way to use Veldrid.SPIRV is through [the extension methods it provid
 ```C#
 byte[] vertexShaderSpirvBytes = File.ReadAllBytes("myshader.vert.spv");
 byte[] fragmentShaderSpirvBytes = File.ReadAllBytes("myshader.vert.spv");
-Shader[] shaders = factory.CreateFromSpirv(
+Shader[] shaders = ResourceFactoryExtensions.CreateFromSpirv(
     new ShaderDescription(ShaderStages.Vertex, vertexShaderSpirvBytes, "main"),
-    new ShaderDescription(ShaderStages.Fragment, vertexShaderSpirvBytes, "main"));
+    new ShaderDescription(ShaderStages.Fragment, fragmentShaderSpirvBytes, "main"));
 // Use "shaders" array to construct a Pipeline
 ```
 
